@@ -141,7 +141,7 @@ export const realData = [
     pitch: 0,
     yaw: 0,
     hfov: 500,
-    autoRotate: 0,
+    autoRotate: -1,
     hotspots: [
       {
         pitch: 1,
@@ -159,7 +159,7 @@ export const realData = [
     pitch: 0,
     yaw: 0,
     hfov: 500,
-    autoRotate: 0,
+    autoRotate: -1,
     hotspots: [
       {
         pitch: -6,
@@ -177,7 +177,7 @@ export const realData = [
     pitch: 0,
     yaw: 0,
     hfov: 500,
-    autoRotate: 0,
+    autoRotate: -1,
     hotspots: [
       {
         pitch: -6,

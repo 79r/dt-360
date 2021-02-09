@@ -16,7 +16,7 @@ const useStyles = createUseStyles({
     },
     "& .custom-hotspot": {
       "& .hotspot": {
-        // transform: "translate3d(42px, -62px, -135px)",
+        transform: "rotateX(45deg)",
         "& .in": {
           backgroundImage: `url('${arrowImage}')`,
           backgroundRepeat: "no-repeat",
