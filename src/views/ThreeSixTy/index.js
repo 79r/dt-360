@@ -4,14 +4,25 @@ import { Pannellum } from "pannellum-react";
 import { useThreeSixTy } from "../../Providers/ThreeSixTyProvider";
 import { useParams } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import arrowImage from "../../assets/arrow.png";
 
-import ImageInfo from "./shared/ImageInfo";
+// import ImageInfo from "./shared/ImageInfo";
 import BackToHomepage from "./shared/BackToHomepage";
 
 const useStyles = createUseStyles({
   root: {
     "& ::-webkit-scrollbar": {
       display: "none",
+    },
+    "& .custom-hotspot": {
+      "& .hotspot": {
+        // transform: "translate3d(42px, -62px, -135px)",
+        "& .in": {
+          backgroundImage: `url('${arrowImage}')`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+        },
+      },
     },
   },
   threeSixTyArea: {
@@ -44,7 +55,7 @@ const Homepage = () => {
         <Pannellum
           width="100%"
           mouseZoom={true}
-          // title={threeSixTyImage.title}
+          title={threeSixTyImage.title}
           image={threeSixTyImage.image}
           pitch={threeSixTyImage.pitch}
           yaw={threeSixTyImage.yaw}
@@ -62,6 +73,9 @@ const Homepage = () => {
               pitch={Number(pitch)}
               yaw={Number(yaw)}
               text={text}
+              cssClass="custom-hotspot"
+              createTooltipFunc="hotspot"
+              createTooltipArgs="Baltimore Museum of Art"
               handleClick={(evt, args) => history.push(path)}
             />
           ))}

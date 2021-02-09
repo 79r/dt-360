@@ -15,9 +15,9 @@ import PropTypes from "prop-types";
 // import Thumbnail5 from "../assets/images/thumbnails/ci1sezq-a-bedroom-with-a-large-cake.jpg";
 // import Thumbnail6 from "../assets/images/thumbnails/5591260-a-living-room-filled-with-furniture-and-a-large-window.jpg";
 
-import imagePan3 from "../assets/360/rev/Pan3.jpg";
-import imagePanorama2021 from "../assets/360/rev/PANORAMA2021.jpg";
-import imageToiletLT1 from "../assets/360/rev/toilet-lt1.jpg";
+import imagePan3 from "../assets/360/rev/compressed/Pan3.jpg";
+import imagePanorama2021 from "../assets/360/rev/compressed/PANORAMA2021.jpg";
+import imageToiletLT1 from "../assets/360/rev/compressed/toilet-lt1.jpg";
 
 /** Covers */
 import coverImagePan3 from "../assets/360/covers/Pan3.jpg";
