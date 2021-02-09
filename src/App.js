@@ -17,14 +17,18 @@ const useStyles = createUseStyles({
 function App() {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" component={Homepage} exact />
-          <Route path="/360/:slug" component={ThreeSixTy} />
-        </Switch>
-      </BrowserRouter>
-    </div>
+    <AppProvider>
+      <ThreeSixTyProvider>
+        <div className={classes.root}>
+          <BrowserRouter>
+            <Switch>
+              <Route path="/" component={Homepage} exact />
+              <Route path="/360/:slug" component={ThreeSixTy} />
+            </Switch>
+          </BrowserRouter>
+        </div>
+      </ThreeSixTyProvider>
+    </AppProvider>
   );
 }
 

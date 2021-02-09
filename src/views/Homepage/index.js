@@ -3,8 +3,7 @@ import { createUseStyles } from "react-jss";
 import { useThreeSixTy } from "../../Providers/ThreeSixTyProvider";
 
 import Title from "./shared/Title";
-import StartButton from "./shared/StartButton";
-import CoverImage from "./shared/CoverImage";
+import Image from "./shared/Image";
 
 const useStyles = createUseStyles({
   root: {
@@ -19,21 +18,6 @@ const useStyles = createUseStyles({
     display: "flex",
     flexWrap: "wrap",
   },
-  item: {
-    width: "50%",
-  },
-  itemBox: {
-    padding: 10,
-    position: "relative",
-    lineHeight: 0,
-  },
-  thumbnail: {
-    overflow: "hidden",
-    "& > img": {
-      width: "100%",
-      height: "auto",
-    },
-  },
 });
 
 const Homepage = () => {
@@ -45,13 +29,8 @@ const Homepage = () => {
       <Title />
       <div className={classes.container}>
         <div className={classes.imageList}>
-          {data.map(({ title, slug, thumbnail }) => (
-            <div className={classes.item} key={slug}>
-              <div className={classes.itemBox}>
-                <CoverImage image={thumbnail} title={title} path={slug} />
-                <StartButton path={slug} />
-              </div>
-            </div>
+          {data.map((image, index) => (
+            <Image key={index} {...image} />
           ))}
         </div>
       </div>

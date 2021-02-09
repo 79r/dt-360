@@ -29,6 +29,8 @@ const Homepage = () => {
   const data = useThreeSixTy();
   const threeSixTyImage = data.find((item) => item.slug === params.slug);
 
+  console.log(data);
+
   let history = useHistory();
 
   if (!params) {
